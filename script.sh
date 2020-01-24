@@ -56,7 +56,7 @@ tar -czvf $bk_dir/all_sites_$date_time.tar.gz -C $inf_dir $dir_to_bk
 #-------------------------------------------------------------
 #Проверяем наличие файла бэкапа
 #-------------------------------------------------------------
-if ! [ -f /$bk_dir/name_all_sites_$date_time.tar.gz  ]; then
+if ! [ -f /$bk_dir/all_sites_$date_time.tar.gz  ]; then
 echo 'Архив с РК не существует.' >> log
 else
 echo 'Архив с РК: OK.' >> log
@@ -65,11 +65,11 @@ fi
 ##############  Выгружаем базы данных    #############
 #-------------------------------------------------------------
 #mysqldump -u$bd_name -u$user -p$password 
-mysqldump -u$user -p$password $bd_name | gzip -c > $bk_dir/$bd_name_mysql_$date_time.sql.gz
+mysqldump -u$user -p$password $bd_name | gzip -c > $bk_dir/$bd_name-mysql-$date_time.sql.gz
 #-------------------------------------------------------------
 #Проверяем наличие выгрузки бд Site1
 #-------------------------------------------------------------
-if ! [ -f /$bk_dir/$bd_name_mysql_$date_time.sql.gz  ]; then
+if ! [ -f /$bk_dir/$bd_name-mysql-$date_time.sql.gz  ]; then
 echo 'Дамп БД сайта $bd_name не существует.' >> log
 else
 echo 'БД $bd_name OK.' >> log
