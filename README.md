@@ -22,4 +22,10 @@ chmod +x sendemail.sh
 chmod +x backup-site.sh
 
 ------
+
+We will send a test letter
+
+./sendemail.sh TEST test-message!
+
+------
 After checking their work, I usually add the task to the crontab file.
