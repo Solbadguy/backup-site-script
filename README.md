@@ -29,3 +29,11 @@ We will send a test letter
 
 ------
 After checking their work, I usually add the task to the crontab file.
+
+------
+
+Instead of email, you can use the functionality that Telegram offers us.
+
+Read how to create such a notification at the link.
+
+https://admin.netlab-kursk.ru/uchim-sistemu-dokladyvat-o-sobytiyax-v-telegram/
